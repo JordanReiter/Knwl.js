@@ -4,14 +4,14 @@ var knwl = new Knwl();
 //Test Places Detection
 describe("places", function() {
 
-    it("should detect places formatted like 'at .' ", function() {
-        knwl.init("They live at Los Angeles");
+    it("should detect places formatted like 'in .' ", function() {
+        knwl.init("They live in Los Angeles");
         var output = knwl.get("places");
         expect(output[0].place).toBe("Los Angeles");
     });
 
-    it("should detect places formatted like 'at .' with a full stop", function() {
-        knwl.init("They live at Los Angeles.");
+    it("should detect places formatted like 'in .' with a full stop", function() {
+        knwl.init("They live in Los Angeles.");
         var output = knwl.get("places");
         expect(output[0].place).toBe("Los Angeles");
     });
